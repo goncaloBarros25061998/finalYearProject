@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "537998938299",
-    "project_id": "surf-449e9",
-    "storage_bucket": "surf-449e9.appspot.com"
+    "project_number": "1003888538324",
+    "project_id": "surflift",
+    "storage_bucket": "surflift.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:537998938299:android:d33510d99ce43cc1ddd99e",
+        "mobilesdk_app_id": "1:1003888538324:android:15966fb4a9f3856d10c141",
         "android_client_info": {
           "package_name": "com.example.finalyearproject"
         }
       },
       "oauth_client": [
         {
-          "client_id": "537998938299-vstbdknvf59rin8ag5gd0ptoi5tjptje.apps.googleusercontent.com",
+          "client_id": "1003888538324-biomqsn5u1ejagg1i4tf27fffrv6k1tu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAiXyiEn8Ga16ahHOAw57DG8cjujkRfNkE"
+          "current_key": "AIzaSyASls7eMQuwWMFlTKLDpLPfOCaq_v8oDmI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "537998938299-vstbdknvf59rin8ag5gd0ptoi5tjptje.apps.googleusercontent.com",
+              "client_id": "1003888538324-biomqsn5u1ejagg1i4tf27fffrv6k1tu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

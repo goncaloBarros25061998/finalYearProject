@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalYearProject">
         <activity
+            android:name=".ShareRide"
+            android:exported="false" />
+        <activity
             android:name=".FindRide"
             android:exported="false" />
         <activity
