@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShareRide">
+    tools:context=".ShareRide"
+    android:background="@drawable/background">
 
     <CalendarView
         android:id="@+id/calendarView2"
@@ -18,7 +19,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="500dp" />
+        android:text="Share Ride"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="510dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

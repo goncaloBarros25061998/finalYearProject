@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mAuth = FirebaseAuth.getInstance();
 
         emailEditText = (EditText) findViewById(R.id.email);
@@ -120,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             FirebaseUser user = mAuth.getCurrentUser();
 
                         } else {
-                            Toast.makeText(getApplicationContext(), "Login sem sucesso", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Login without sucess", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

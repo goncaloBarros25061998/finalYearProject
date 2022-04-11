@@ -36,8 +36,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
     private boolean hasCar;
 
-    //DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://surf-449e9-default-rtdb.firebaseio.com/");
-
     private FirebaseAuth mAuth;
 
     @Override
@@ -138,7 +136,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Log.i("User created", "createUserWithEmail:success");
-                            Toast.makeText(getApplicationContext(), "Registo com sucesso", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Account Registered with sucess", Toast.LENGTH_LONG).show();
                             db.collection("users").document(email)
                                     .set(user)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -156,7 +154,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                             FirebaseUser user = mAuth.getCurrentUser();
                         } else {
                             Log.i("Error", task.getException().toString());
-                            Toast.makeText(getApplicationContext(), "Registo sem sucesso", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Account Registered without sucess", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

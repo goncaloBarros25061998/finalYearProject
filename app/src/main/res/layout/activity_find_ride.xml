@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".FindRide">
 
     <CalendarView
@@ -11,13 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="75dp" />
+        tools:layout_editor_absoluteY="80dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Find Ride"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="525dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
