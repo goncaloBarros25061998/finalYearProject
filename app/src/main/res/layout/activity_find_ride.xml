@@ -7,18 +7,27 @@
     android:background="@drawable/background"
     tools:context=".FindRide">
 
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="80dp" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="158dp"
         android:text="Find Ride"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="525dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

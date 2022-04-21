@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText emailEditText, passwordEditText;
     private Button signInButton;
     private FirebaseAuth mAuth;
+    private boolean success = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,12 +65,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+
             case R.id.register:
                 startActivity(new Intent(this, RegisterUser.class));
                 break;
             case R.id.signIn:
                 signIn();
-
+                break;
             case R.id.forgotPassword:
                 startActivity(new Intent(this, ForgotPassword.class));
                 break;
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void signIn() {
+    public void signIn() {
         String email= emailEditText.getText().toString().trim();
         String password= passwordEditText.getText().toString().trim();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -107,7 +109,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                         DocumentSnapshot document = task.getResult();
                                         if (document.exists()) {
                                             Log.i(document.getData().toString(), "retrieveUserFirestore:success");
-
+                                            if (document.getBoolean("car")) {
+                                                startActivity(new Intent(getApplication(), ShareRide.class));
+                                            } else {
+                                                startActivity(new Intent(getApplication(), FindRide.class));
+                                            }
+                                            success = true;
                                         } else {
                                             Log.i("User does not exist", "retrieveUserFirestore:failure");
                                         }
