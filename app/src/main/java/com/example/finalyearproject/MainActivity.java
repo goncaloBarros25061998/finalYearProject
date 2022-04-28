@@ -25,6 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     public TextView register, forgotPassword;
+    private static User user;
     private EditText emailEditText, passwordEditText;
     private Button signInButton;
     private FirebaseAuth mAuth;
@@ -85,12 +86,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         if (email.isEmpty()){
-            emailEditText.setError("Email is Reguired!");
+            emailEditText.setError("Email is Required!");
             emailEditText.requestFocus();
             return;
         }
         if(password.isEmpty()){
-            passwordEditText.setError("Password is Requiered");
+            passwordEditText.setError("Password is Required");
             passwordEditText.requestFocus();
             return;
         }
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                         DocumentSnapshot document = task.getResult();
                                         if (document.exists()) {
                                             Log.i(document.getData().toString(), "retrieveUserFirestore:success");
+                                            user = new User(document.getString("name"), document.getString("birthDate"), document.getString("email"), document.getString("phone"), document.getBoolean("car"));
                                             if (document.getBoolean("car")) {
                                                 startActivity(new Intent(getApplication(), ShareRide.class));
                                             } else {
@@ -130,5 +132,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 });
+    }
+
+    public static User getUser() {
+        return user;
     }
 }

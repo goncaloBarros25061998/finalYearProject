@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalYearProject">
         <activity
+            android:name=".RideDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeekViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SavedRides"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity

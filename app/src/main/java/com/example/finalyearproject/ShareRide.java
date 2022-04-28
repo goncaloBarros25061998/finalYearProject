@@ -48,7 +48,7 @@ public class ShareRide extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()){
 
             case R.id.ridesButton:
-                // show rides
+                startActivity(new Intent(this, SavedRides.class));
                 break;
             case R.id.shareButton:
                 shareRide();

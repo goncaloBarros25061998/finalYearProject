@@ -31,7 +31,7 @@
         android:width="150dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Location Meeting"
+        android:hint="Location Metting"
         app:layout_constraintEnd_toStartOf="@+id/editTextSeats"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datePicker" />
@@ -47,7 +47,7 @@
         android:width="150dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Number os Sits"
+        android:hint="Number Of sits"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextLocation"
         app:layout_constraintTop_toBottomOf="@+id/datePicker" />
@@ -57,10 +57,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Email"
+        android:hint="email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLocation" />
 
@@ -85,6 +85,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="200dp"
         android:layout_marginBottom="92dp"
+        android:onClick="onClick"
         android:text="My Rides"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,12 +98,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="46dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="39dp"
         android:width="100dp"
         android:ems="10"
         android:inputType="time"
+        android:hint="Time"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/editTextEmail"
         app:layout_constraintTop_toBottomOf="@+id/editTextSeats" />
 
